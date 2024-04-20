@@ -157,7 +157,7 @@
     height: 110vmin;
     transform: rotate(90deg);
     margin: 0;
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   .number {
@@ -168,6 +168,11 @@
 
   .btn-container {
     transform: rotate(90deg);
-    margin-top: 5rem;
+    margin-top: 1rem;
+  }
+
+  .generated-number {
+    margin: 1rem;
+    height: 20vmin;
   }
 }
