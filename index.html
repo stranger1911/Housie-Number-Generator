@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Housie Number Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main-container">
+        <div class="container">
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+            <div class="number">10</div>
+            <div class="number">11</div>
+            <div class="number">12</div>
+            <div class="number">13</div>
+            <div class="number">14</div>
+            <div class="number">15</div>
+            <div class="number">16</div>
+            <div class="number">17</div>
+            <div class="number">18</div>
+            <div class="number">19</div>
+            <div class="number">20</div>
+            <div class="number">21</div>
+            <div class="number">22</div>
+            <div class="number">23</div>
+            <div class="number">24</div>
+            <div class="number">25</div>
+            <div class="number">26</div>
+            <div class="number">27</div>
+            <div class="number">28</div>
+            <div class="number">29</div>
+            <div class="number">30</div>
+            <div class="number">31</div>
+            <div class="number">32</div>
+            <div class="number">33</div>
+            <div class="number">34</div>
+            <div class="number">35</div>
+            <div class="number">36</div>
+            <div class="number">37</div>
+            <div class="number">38</div>
+            <div class="number">39</div>
+            <div class="number">40</div>
+            <div class="number">41</div>
+            <div class="number">42</div>
+            <div class="number">43</div>
+            <div class="number">44</div>
+            <div class="number">45</div>
+            <div class="number">46</div>
+            <div class="number">47</div>
+            <div class="number">48</div>
+            <div class="number">49</div>
+            <div class="number">50</div>
+            <div class="number">51</div>
+            <div class="number">52</div>
+            <div class="number">53</div>
+            <div class="number">54</div>
+            <div class="number">55</div>
+            <div class="number">56</div>
+            <div class="number">57</div>
+            <div class="number">58</div>
+            <div class="number">59</div>
+            <div class="number">60</div>
+            <div class="number">61</div>
+            <div class="number">62</div>
+            <div class="number">63</div>
+            <div class="number">64</div>
+            <div class="number">65</div>
+            <div class="number">66</div>
+            <div class="number">67</div>
+            <div class="number">68</div>
+            <div class="number">69</div>
+            <div class="number">70</div>
+            <div class="number">71</div>
+            <div class="number">72</div>
+            <div class="number">73</div>
+            <div class="number">74</div>
+            <div class="number">75</div>
+            <div class="number">76</div>
+            <div class="number">77</div>
+            <div class="number">78</div>
+            <div class="number">79</div>
+            <div class="number">80</div>
+            <div class="number">81</div>
+            <div class="number">82</div>
+            <div class="number">83</div>
+            <div class="number">84</div>
+            <div class="number">85</div>
+            <div class="number">86</div>
+            <div class="number">87</div>
+            <div class="number">88</div>
+            <div class="number">89</div>
+            <div class="number">90</div>
+        </div>
+
+        <div class="btn-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 audio-on">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 audio-of">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+              </svg>
+              
+            <button class="reset-btn">Reset</button>
+            <div class="generated-number"></div>
+            <button class="generate-btn">Generate</button>
+            <div class="auto-generate">
+                <select name="auto" id="auto" class="auto">
+                    <option value="3">3 Sec</option>
+                    <option value="6">6 Sec</option>
+                    <option value="9">9 Sec</option>
+                </select>
+                <button class="autoBtn">Start Auto Generate</button>
+
+                <button class="stop">Stop</button>
+                <button class="resume">Resume</button>
+            </div>
+            <a class="history" href="#">Show History...</a>
+        </div>
+    </main>
+
+<script>
+    let generateBtn = document.querySelector('.generate-btn');
+    let generatedNum = document.querySelector('.generated-number');
+    let resetBtn = document.querySelector('.reset-btn');
+    let number = document.querySelectorAll('.number');
+    let audioOn = document.querySelector('.audio-on');
+    let audioOf = document.querySelector('.audio-of');
+    let history = document.querySelector('.history');
+    let autoGen = document.querySelector('.auto');
+    let autoGenBtn = document.querySelector('.autoBtn');
+    let stopAutoGen = document.querySelector('.stop');
+    let resumeAutoGen = document.querySelector('.resume')
+    let synth = window.speechSynthesis;
+    let utterance;
+    let numCount = 1;
+    let numberStored = [];
+    let maxNum = 90;
+    let muted = false;
+    let intervalId3;
+    let intervalId6;
+    let intervalId9;
+
+    autoGenBtn.addEventListener('click', autoGenerateNum)
+
+    generateBtn.addEventListener('click' , generateRandomNum)
+
+    function autoGenerateNum(){
+        generateBtn.disabled = true;
+        autoGenBtn.style.display = 'none';
+        stopAutoGen.style.display = 'block'
+        if(autoGen.value == 3 && numCount < 90){
+            intervalId3 = setInterval(() => {
+                clearInterval(intervalId6);
+                clearInterval(intervalId9);
+                generateRandomNum();
+            }, 3000);         
+        }else if(autoGen.value == 6 && numCount < 90){
+            intervalId6 = setInterval(() => {
+                clearInterval(intervalId3);
+                clearInterval(intervalId9);
+                generateRandomNum();
+            }, 6000);
+        }
+        else if(autoGen.value == 9 && numCount < 90){
+            intervalId9 = setInterval(() => {
+                clearInterval(intervalId6);
+                clearInterval(intervalId3);
+                generateRandomNum();
+                }, 9000);
+        }
+}
+
+    function generateRandomNum(){
+        if(numCount <= maxNum){
+            let randomNum;
+            do{
+               randomNum = Math.floor(Math.random() * maxNum) + 1;
+            }while(numberStored.includes(randomNum))
+
+            numberStored.push(randomNum)
+            stopSpeech();
+            utterance = new SpeechSynthesisUtterance(randomNum);
+            if (muted) {
+            utterance.volume = 0;
+        }
+        synth.speak(utterance);
+            generatedNum.innerHTML = randomNum;
+            let changeDivColor = document.querySelector(`.number:nth-child(${randomNum})`)
+            changeDivColor.style.backgroundColor = '#f8333c';
+            numCount++
+        }else{
+            alert('Please reset first');
+            clearInterval(intervalId3);
+            clearInterval(intervalId6);
+            clearInterval(intervalId9);
+        }
+    }
+
+resetBtn.addEventListener('click', reset);
+    function reset(){
+        numberStored = [];
+        // console.log(number)
+        number.forEach(el=>{
+el.style.backgroundColor = '#52b788'
+        })
+        numCount = 1;
+        generatedNum.innerHTML = '';
+        generateBtn.disabled = false;
+        autoGenBtn.style.display = 'block';
+        resumeAutoGen.style.display = 'none';
+        stopAutoGen.style.display = 'none'
+        clearInterval(intervalId3);
+        clearInterval(intervalId6);
+        clearInterval(intervalId9);
+}
+
+    function pauseSpeech() {
+        if (synth && utterance) {
+            synth.pause();
+        }
+    }
+
+    function resumeSpeech() {
+        if (synth && utterance) {
+            synth.resume();
+        }
+    }
+
+    function stopSpeech() {
+        if (synth && utterance) {
+            synth.cancel();
+        }
+    }
+    
+    audioOn.addEventListener('click', muteSpeech)
+
+    function muteSpeech() {
+        muted = true;
+        if (synth && utterance) {
+            utterance.volume = 0;
+        }
+        audioOn.style.display = 'none'
+        audioOf.style.display = 'block'
+    } 
+
+    audioOf.addEventListener('click', unmuteSpeech)
+
+    function unmuteSpeech() {
+        muted = false;
+        if (synth && utterance) {
+            utterance.volume = 1;
+        }
+        audioOn.style.display = 'block'
+        audioOf.style.display = 'none'
+    }
+
+history.addEventListener('click', showHistory)
+
+function showHistory(){
+    let str = numberStored.toString();
+    alert(str.split(',').join('>'))
+}
+
+stopAutoGen.addEventListener('click', function(){
+    clearInterval(intervalId3);
+    clearInterval(intervalId6);
+    clearInterval(intervalId9);
+    stopAutoGen.style.display = 'none';
+    resumeAutoGen.style.display = 'block';
+})
+
+resumeAutoGen.addEventListener('click', function(){
+    stopAutoGen.style.display = 'block';
+        resumeAutoGen.style.display = 'none';
+    if(autoGen.value == 3 && numCount < 90){
+            intervalId3 = setInterval(() => {
+                clearInterval(intervalId6);
+                clearInterval(intervalId9);
+                generateRandomNum();
+            }, 3000);         
+        }else if(autoGen.value == 6 && numCount < 90){
+            intervalId6 = setInterval(() => {
+                clearInterval(intervalId3);
+                clearInterval(intervalId9);
+                generateRandomNum();
+            }, 6000);
+        }
+        else if(autoGen.value == 9 && numCount < 90){
+            intervalId9 = setInterval(() => {
+                clearInterval(intervalId6);
+                clearInterval(intervalId3);
+                generateRandomNum();
+                }, 9000);
+        }
+})
+
+</script>
+</body>
+</html>
