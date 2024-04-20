@@ -154,7 +154,7 @@
   .container {
     flex-direction: row;
     width: 130vmin;
-    height: 100vmin;
+    height: 110vmin;
     transform: rotate(90deg);
     margin: 0;
     margin-top: 14rem;
@@ -163,7 +163,7 @@
   }
 
   .number {
-    height: 9vmin;
+    height: 10vmin;
     width: 12vmin;
     font-size: 1.5rem;
   }
