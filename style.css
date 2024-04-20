@@ -154,13 +154,16 @@
   .container {
     flex-direction: row;
     width: 120vmin;
-    height: 80vmin;
+    height: 110vmin;
     transform: rotate(90deg);
+    margin: 0;
+    margin-top: 4rem;
   }
 
   .number {
-    height: 7vmin;
+    height: 10vmin;
     width: 11vmin;
+    font-size: 2rem;
   }
 
   .btn-container {
