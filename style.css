@@ -142,15 +142,29 @@
   display: none;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 500px) {
   .main-container {
     flex-direction: column;
-    justify-content: right;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 100%;
   }
 
   .container {
-    flex-direction: column;
-    width: 90vmin;
-    height: 90vmin;
+    flex-direction: row;
+    width: 120vmin;
+    height: 80vmin;
+    transform: rotate(90deg);
+  }
+
+  .number {
+    height: 7vmin;
+    width: 11vmin;
+  }
+
+  .btn-container {
+    transform: rotate(90deg);
+    margin-top: 5rem;
   }
 }
