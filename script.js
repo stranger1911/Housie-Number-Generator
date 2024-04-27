@@ -142,6 +142,7 @@ function showHistory() {
 }
 
 stopAutoGen.addEventListener("click", function () {
+  generateBtn.disabled = false;
   clearInterval(intervalId3);
   clearInterval(intervalId6);
   clearInterval(intervalId9);
@@ -150,6 +151,7 @@ stopAutoGen.addEventListener("click", function () {
 });
 
 resumeAutoGen.addEventListener("click", function () {
+  generateBtn.disabled = true;
   stopAutoGen.style.display = "block";
   resumeAutoGen.style.display = "none";
   if (autoGen.value == 3 && numCount < 90) {
