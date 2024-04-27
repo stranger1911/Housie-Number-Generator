@@ -37,11 +37,11 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       randomNumberGenerator();
     } while (randomNumberStored.includes(randomNumber));
     randomNumberStored.push(randomNumber);
-    console.log(i, randomNumberStored);
+    // console.log(i, randomNumberStored);
 
     if (randomNumber <= 9) {
       let randomColoum1 = Math.floor(Math.random() * coloum1.length);
-      console.log(typeof randomColoum1, randomColoum1);
+      // console.log(typeof randomColoum1, randomColoum1);
       ticketBox[coloum1[randomColoum1]].innerHTML = randomNumber;
       if (randomColoum1 == 0) {
         coloum1.shift();
@@ -52,7 +52,7 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       }
     } else if (randomNumber > 9 && randomNumber <= 19) {
       let randomColoum2 = Math.floor(Math.random() * coloum2.length);
-      console.log(randomColoum2);
+      // console.log(randomColoum2);
       ticketBox[coloum2[randomColoum2]].innerHTML = randomNumber;
       if (randomColoum2 == 0) {
         coloum2.shift();
@@ -63,7 +63,7 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       }
     } else if (randomNumber > 19 && randomNumber <= 29) {
       let randomColoum3 = Math.floor(Math.random() * coloum3.length);
-      console.log(randomColoum3);
+      // console.log(randomColoum3);
       ticketBox[coloum3[randomColoum3]].innerHTML = randomNumber;
       if (randomColoum3 == 0) {
         coloum3.shift();
@@ -74,7 +74,7 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       }
     } else if (randomNumber > 29 && randomNumber <= 39) {
       let randomColoum4 = Math.floor(Math.random() * coloum4.length);
-      console.log(randomColoum4);
+      // console.log(randomColoum4);
       ticketBox[coloum4[randomColoum4]].innerHTML = randomNumber;
       if (randomColoum4 == 0) {
         coloum4.shift();
@@ -85,7 +85,7 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       }
     } else if (randomNumber > 39 && randomNumber <= 49) {
       let randomColoum5 = Math.floor(Math.random() * coloum5.length);
-      console.log(randomColoum5);
+      // console.log(randomColoum5);
       ticketBox[coloum5[randomColoum5]].innerHTML = randomNumber;
       if (randomColoum5 == 0) {
         coloum5.shift();
@@ -96,7 +96,7 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       }
     } else if (randomNumber > 49 && randomNumber <= 59) {
       let randomColoum6 = Math.floor(Math.random() * coloum6.length);
-      console.log(randomColoum6);
+      // console.log(randomColoum6);
       ticketBox[coloum6[randomColoum6]].innerHTML = randomNumber;
       if (randomColoum6 == 0) {
         coloum6.shift();
@@ -107,7 +107,7 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       }
     } else if (randomNumber > 59 && randomNumber <= 69) {
       let randomColoum7 = Math.floor(Math.random() * coloum7.length);
-      console.log(randomColoum7);
+      // console.log(randomColoum7);
       ticketBox[coloum7[randomColoum7]].innerHTML = randomNumber;
       if (randomColoum7 == 0) {
         coloum7.shift();
@@ -118,7 +118,7 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       }
     } else if (randomNumber > 69 && randomNumber <= 79) {
       let randomColoum8 = Math.floor(Math.random() * coloum8.length);
-      console.log(randomColoum8);
+      // console.log(randomColoum8);
       ticketBox[coloum8[randomColoum8]].innerHTML = randomNumber;
       if (randomColoum8 == 0) {
         coloum8.shift();
@@ -129,7 +129,7 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       }
     } else if (randomNumber > 79 && randomNumber <= 90) {
       let randomColoum9 = Math.floor(Math.random() * coloum9.length);
-      console.log(randomColoum9);
+      // console.log(randomColoum9);
       ticketBox[coloum9[randomColoum9]].innerHTML = randomNumber;
       if (randomColoum9 == 0) {
         coloum9.shift();
@@ -388,7 +388,7 @@ ticketBox.forEach(function (e) {
     if (e.innerHTML != "") {
       this.disabled = true;
       this.style.color = "red";
-      this.style.setProperty("background-color", "red", "important");
+      this.style.background = "red";
     }
   });
 });
