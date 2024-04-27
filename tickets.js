@@ -28,7 +28,7 @@ let row3 = [18, 19, 20, 21, 22, 23, 24, 25, 26];
 
 let randomNumber;
 
-if (window.location.pathname === "/ticket.html") {
+if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
   ticketBox.forEach((e) => {
     e.innerHTML = "";
   });
