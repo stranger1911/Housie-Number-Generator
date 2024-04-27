@@ -27,7 +27,7 @@ let row2 = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 let row3 = [18, 19, 20, 21, 22, 23, 24, 25, 26];
 
 let randomNumber;
-
+// /Housie-Number-Generator
 if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
   ticketBox.forEach((e) => {
     e.innerHTML = "";
@@ -37,110 +37,48 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
       randomNumberGenerator();
     } while (randomNumberStored.includes(randomNumber));
     randomNumberStored.push(randomNumber);
-    // console.log(i, randomNumberStored);
 
     if (randomNumber <= 9) {
       let randomColoum1 = Math.floor(Math.random() * coloum1.length);
-      // console.log(typeof randomColoum1, randomColoum1);
-      ticketBox[coloum1[randomColoum1]].innerHTML = randomNumber;
-      if (randomColoum1 == 0) {
-        coloum1.shift();
-      } else if (randomColoum1 == 1) {
-        coloum1.splice(randomColoum1, randomColoum1);
-      } else {
-        coloum1.splice(randomColoum1, randomColoum1 - 1);
-      }
+      removeIndexIfUsed(randomColoum1, coloum1);
     } else if (randomNumber > 9 && randomNumber <= 19) {
       let randomColoum2 = Math.floor(Math.random() * coloum2.length);
-      // console.log(randomColoum2);
-      ticketBox[coloum2[randomColoum2]].innerHTML = randomNumber;
-      if (randomColoum2 == 0) {
-        coloum2.shift();
-      } else if (randomColoum2 == 1) {
-        coloum2.splice(randomColoum2, randomColoum2);
-      } else {
-        coloum2.splice(randomColoum2, randomColoum2 - 1);
-      }
+      removeIndexIfUsed(randomColoum2, coloum2);
     } else if (randomNumber > 19 && randomNumber <= 29) {
       let randomColoum3 = Math.floor(Math.random() * coloum3.length);
-      // console.log(randomColoum3);
-      ticketBox[coloum3[randomColoum3]].innerHTML = randomNumber;
-      if (randomColoum3 == 0) {
-        coloum3.shift();
-      } else if (randomColoum3 == 1) {
-        coloum3.splice(randomColoum3, randomColoum3);
-      } else {
-        coloum3.splice(randomColoum3, randomColoum3 - 1);
-      }
+      removeIndexIfUsed(randomColoum3, coloum3);
     } else if (randomNumber > 29 && randomNumber <= 39) {
       let randomColoum4 = Math.floor(Math.random() * coloum4.length);
-      // console.log(randomColoum4);
-      ticketBox[coloum4[randomColoum4]].innerHTML = randomNumber;
-      if (randomColoum4 == 0) {
-        coloum4.shift();
-      } else if (randomColoum4 == 1) {
-        coloum4.splice(randomColoum4, randomColoum4);
-      } else {
-        coloum4.splice(randomColoum4, randomColoum4 - 1);
-      }
+      removeIndexIfUsed(randomColoum4, coloum4);
     } else if (randomNumber > 39 && randomNumber <= 49) {
       let randomColoum5 = Math.floor(Math.random() * coloum5.length);
-      // console.log(randomColoum5);
-      ticketBox[coloum5[randomColoum5]].innerHTML = randomNumber;
-      if (randomColoum5 == 0) {
-        coloum5.shift();
-      } else if (randomColoum5 == 1) {
-        coloum5.splice(randomColoum5, randomColoum5);
-      } else {
-        coloum5.splice(randomColoum5, randomColoum5 - 1);
-      }
+      removeIndexIfUsed(randomColoum5, coloum5);
     } else if (randomNumber > 49 && randomNumber <= 59) {
       let randomColoum6 = Math.floor(Math.random() * coloum6.length);
-      // console.log(randomColoum6);
-      ticketBox[coloum6[randomColoum6]].innerHTML = randomNumber;
-      if (randomColoum6 == 0) {
-        coloum6.shift();
-      } else if (randomColoum6 == 1) {
-        coloum6.splice(randomColoum6, randomColoum6);
-      } else {
-        coloum6.splice(randomColoum6, randomColoum6 - 1);
-      }
+      removeIndexIfUsed(randomColoum6, coloum6);
     } else if (randomNumber > 59 && randomNumber <= 69) {
       let randomColoum7 = Math.floor(Math.random() * coloum7.length);
-      // console.log(randomColoum7);
-      ticketBox[coloum7[randomColoum7]].innerHTML = randomNumber;
-      if (randomColoum7 == 0) {
-        coloum7.shift();
-      } else if (randomColoum7 == 1) {
-        coloum7.splice(randomColoum7, randomColoum7);
-      } else {
-        coloum7.splice(randomColoum7, randomColoum7 - 1);
-      }
+      removeIndexIfUsed(randomColoum7, coloum7);
     } else if (randomNumber > 69 && randomNumber <= 79) {
       let randomColoum8 = Math.floor(Math.random() * coloum8.length);
-      // console.log(randomColoum8);
-      ticketBox[coloum8[randomColoum8]].innerHTML = randomNumber;
-      if (randomColoum8 == 0) {
-        coloum8.shift();
-      } else if (randomColoum8 == 1) {
-        coloum8.splice(randomColoum8, randomColoum8);
-      } else {
-        coloum8.splice(randomColoum8, randomColoum8 - 1);
-      }
+      removeIndexIfUsed(randomColoum8, coloum8);
     } else if (randomNumber > 79 && randomNumber <= 90) {
       let randomColoum9 = Math.floor(Math.random() * coloum9.length);
-      // console.log(randomColoum9);
-      ticketBox[coloum9[randomColoum9]].innerHTML = randomNumber;
-      if (randomColoum9 == 0) {
-        coloum9.shift();
-      } else if (randomColoum9 == 1) {
-        coloum9.splice(randomColoum9, randomColoum9);
-      } else {
-        coloum9.splice(randomColoum9, randomColoum9 - 1);
-      }
+      removeIndexIfUsed(randomColoum9, coloum9);
     }
   }
   assendingOrder();
+}
+
+function removeIndexIfUsed(randomColoum, coloum) {
+  ticketBox[coloum[randomColoum]].innerHTML = randomNumber;
+  if (randomColoum == 0) {
+    coloum.shift();
+  } else if (randomColoum == 1) {
+    coloum.splice(randomColoum, randomColoum);
+  } else {
+    coloum.splice(randomColoum, randomColoum - 1);
+  }
 }
 
 // newTicket.addEventListener("click", function () {});
@@ -149,31 +87,31 @@ if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
 
 function randomNumberGenerator() {
   randomNumber = Math.floor(Math.random() * 90) + 1;
-  if (randomNumber <= 9 && coloum1Count <= 3) {
+  if (randomNumber <= 9 && coloum1Count <= 2) {
     coloum1Count++;
     return randomNumber;
-  } else if (randomNumber > 9 && randomNumber <= 19 && coloum2Count <= 3) {
+  } else if (randomNumber > 9 && randomNumber <= 19 && coloum2Count <= 2) {
     coloum2Count++;
     return randomNumber;
-  } else if (randomNumber > 19 && randomNumber <= 29 && coloum3Count <= 3) {
+  } else if (randomNumber > 19 && randomNumber <= 29 && coloum3Count <= 2) {
     coloum3Count++;
     return randomNumber;
-  } else if (randomNumber > 29 && randomNumber <= 39 && coloum4Count <= 3) {
+  } else if (randomNumber > 29 && randomNumber <= 39 && coloum4Count <= 2) {
     coloum4Count++;
     return randomNumber;
-  } else if (randomNumber > 39 && randomNumber <= 49 && coloum5Count <= 3) {
+  } else if (randomNumber > 39 && randomNumber <= 49 && coloum5Count <= 2) {
     coloum5Count++;
     return randomNumber;
-  } else if (randomNumber > 49 && randomNumber <= 59 && coloum6Count <= 3) {
+  } else if (randomNumber > 49 && randomNumber <= 59 && coloum6Count <= 2) {
     coloum6Count++;
     return randomNumber;
-  } else if (randomNumber > 59 && randomNumber <= 69 && coloum7Count <= 3) {
+  } else if (randomNumber > 59 && randomNumber <= 69 && coloum7Count <= 2) {
     coloum7Count++;
     return randomNumber;
-  } else if (randomNumber > 69 && randomNumber <= 79 && coloum8Count <= 3) {
+  } else if (randomNumber > 69 && randomNumber <= 79 && coloum8Count <= 2) {
     coloum8Count++;
     return randomNumber;
-  } else if (randomNumber > 79 && randomNumber <= 90 && coloum9Count <= 3) {
+  } else if (randomNumber > 79 && randomNumber <= 90 && coloum9Count <= 2) {
     coloum9Count++;
     return randomNumber;
   } else {
