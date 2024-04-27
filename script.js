@@ -79,7 +79,6 @@ function generateRandomNum() {
 resetBtn.addEventListener("click", reset);
 function reset() {
   numberStored = [];
-  // console.log(number)
   number.forEach((el) => {
     el.style.backgroundColor = "#52b788";
   });
