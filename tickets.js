@@ -386,7 +386,7 @@ function assendingOrder() {
 ticketBox.forEach(function (e) {
   e.addEventListener("click", function () {
     if (e.innerHTML != "") {
-      this.disabled = true;
+      // this.disabled = true;
       // this.style.color = "red";
       this.style.background = "red";
     }
