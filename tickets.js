@@ -376,7 +376,7 @@ function removeRows() {
 }
 
 // /Housie-Number-Generator
-if (window.location.pathname === "/ticket.html") {
+if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
   ticketBox.forEach((e) => {
     e.innerHTML = "";
   });
