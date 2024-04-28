@@ -192,6 +192,7 @@
   border: 1px solid black;
   font-size: 3rem;
   background: linear-gradient(135deg, #52b788, #52b788);
+  /* box-shadow: 0 0 10px #4caf50, 0 0 40px #4caf50, 0 0 80px #4caf50; */
   cursor: pointer;
   border-radius: 1rem;
 }

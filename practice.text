@@ -1,0 +1,341 @@
+function removeRows() {
+  row1.forEach((e) => {
+    if (ticketBox[e].innerHTML) {
+      console.log("hello");
+      if (rowCount1 != 5) {
+        rowCount1++;
+      } else {
+        row1.forEach((e) => {
+          if (ticketBox[e] == "") {
+            if (
+              coloum1.indexOf(e) == 0 ||
+              coloum2.indexOf(e) == 0 ||
+              coloum3.indexOf(e) == 0 ||
+              coloum4.indexOf(e) == 0 ||
+              coloum5.indexOf(e) == 0 ||
+              coloum6.indexOf(e) == 0 ||
+              coloum7.indexOf(e) == 0 ||
+              coloum8.indexOf(e) == 0 ||
+              coloum9.indexOf(e) == 0
+            ) {
+              console.log("hello");
+              if (e == 0) {
+                coloum1.shift();
+              } else if (e == 1) {
+                coloum2.shift();
+              } else if (e == 2) {
+                coloum3.shift();
+              } else if (e == 3) {
+                coloum4.shift();
+              } else if (e == 4) {
+                coloum5.shift();
+              } else if (e == 5) {
+                coloum6.shift();
+              } else if (e == 6) {
+                coloum7.shift();
+              } else if (e == 7) {
+                coloum8.shift();
+              } else if (e == 8) {
+                coloum9.shift();
+              }
+            } else if (
+              coloum1.indexOf(e) == 1 ||
+              coloum2.indexOf(e) == 1 ||
+              coloum3.indexOf(e) == 1 ||
+              coloum4.indexOf(e) == 1 ||
+              coloum5.indexOf(e) == 1 ||
+              coloum6.indexOf(e) == 1 ||
+              coloum7.indexOf(e) == 1 ||
+              coloum8.indexOf(e) == 1 ||
+              coloum9.indexOf(e) == 1
+            ) {
+              if (e == 0) {
+                coloum1.splice(1, 1);
+              } else if (e == 1) {
+                coloum2.splice(1, 1);
+              } else if (e == 2) {
+                coloum3.splice(1, 1);
+              } else if (e == 3) {
+                coloum4.splice(1, 1);
+              } else if (e == 4) {
+                coloum5.splice(1, 1);
+              } else if (e == 5) {
+                coloum6.splice(1, 1);
+              } else if (e == 6) {
+                coloum7.splice(1, 1);
+              } else if (e == 7) {
+                coloum8.splice(1, 1);
+              } else if (e == 8) {
+                coloum9.splice(1, 1);
+              }
+            } else if (
+              coloum1.indexOf(e) == 2 ||
+              coloum2.indexOf(e) == 2 ||
+              coloum3.indexOf(e) == 2 ||
+              coloum4.indexOf(e) == 2 ||
+              coloum5.indexOf(e) == 2 ||
+              coloum6.indexOf(e) == 2 ||
+              coloum7.indexOf(e) == 2 ||
+              coloum8.indexOf(e) == 2 ||
+              coloum9.indexOf(e) == 2
+            ) {
+              if (e == 0) {
+                coloum1.splice(2, 1);
+              } else if (e == 1) {
+                coloum2.splice(2, 1);
+              } else if (e == 2) {
+                coloum3.splice(2, 1);
+              } else if (e == 3) {
+                coloum4.splice(2, 1);
+              } else if (e == 4) {
+                coloum5.splice(2, 1);
+              } else if (e == 5) {
+                coloum6.splice(2, 1);
+              } else if (e == 6) {
+                coloum7.splice(2, 1);
+              } else if (e == 7) {
+                coloum8.splice(2, 1);
+              } else if (e == 8) {
+                coloum9.splice(2, 1);
+              }
+            }
+          }
+        });
+        // coloum1.shift();
+        // coloum2.shift();
+        // coloum3.shift();
+        // coloum4.shift();
+        // coloum5.shift();
+        // coloum6.shift();
+        // coloum7.shift();
+        // coloum8.shift();
+        // coloum9.shift();
+      }
+    }
+  });
+  row2.forEach((e) => {
+    if (ticketBox[e].innerHTML) {
+      if (rowCount2 != 5) {
+        rowCount2++;
+      } else {
+        row2.forEach((e) => {
+          if (ticketBox[e] == "") {
+            if (
+              coloum1.indexOf(e) == 0 ||
+              coloum2.indexOf(e) == 0 ||
+              coloum3.indexOf(e) == 0 ||
+              coloum4.indexOf(e) == 0 ||
+              coloum5.indexOf(e) == 0 ||
+              coloum6.indexOf(e) == 0 ||
+              coloum7.indexOf(e) == 0 ||
+              coloum8.indexOf(e) == 0 ||
+              coloum9.indexOf(e) == 0
+            ) {
+              if (e == 9) {
+                coloum1.shift();
+              } else if (e == 10) {
+                coloum1.shift();
+              } else if (e == 11) {
+                coloum1.shift();
+              } else if (e == 12) {
+                coloum1.shift();
+              } else if (e == 13) {
+                coloum1.shift();
+              } else if (e == 14) {
+                coloum1.shift();
+              } else if (e == 15) {
+                coloum1.shift();
+              } else if (e == 16) {
+                coloum1.shift();
+              } else if (e == 17) {
+                coloum1.shift();
+              }
+            } else if (
+              coloum1.indexOf(e) == 1 ||
+              coloum2.indexOf(e) == 1 ||
+              coloum3.indexOf(e) == 1 ||
+              coloum4.indexOf(e) == 1 ||
+              coloum5.indexOf(e) == 1 ||
+              coloum6.indexOf(e) == 1 ||
+              coloum7.indexOf(e) == 1 ||
+              coloum8.indexOf(e) == 1 ||
+              coloum9.indexOf(e) == 1
+            ) {
+              if (e == 9) {
+                coloum1.splice(1, 1);
+              } else if (e == 10) {
+                coloum1.splice(1, 1);
+              } else if (e == 11) {
+                coloum1.splice(1, 1);
+              } else if (e == 12) {
+                coloum1.splice(1, 1);
+              } else if (e == 13) {
+                coloum1.splice(1, 1);
+              } else if (e == 14) {
+                coloum1.splice(1, 1);
+              } else if (e == 15) {
+                coloum1.splice(1, 1);
+              } else if (e == 16) {
+                coloum1.splice(1, 1);
+              } else if (e == 17) {
+                coloum1.splice(1, 1);
+              }
+            } else if (
+              coloum1.indexOf(e) == 2 ||
+              coloum2.indexOf(e) == 2 ||
+              coloum3.indexOf(e) == 2 ||
+              coloum4.indexOf(e) == 2 ||
+              coloum5.indexOf(e) == 2 ||
+              coloum6.indexOf(e) == 2 ||
+              coloum7.indexOf(e) == 2 ||
+              coloum8.indexOf(e) == 2 ||
+              coloum9.indexOf(e) == 2
+            ) {
+              if (e == 9) {
+                coloum1.splice(2, 1);
+              } else if (e == 10) {
+                coloum1.splice(2, 1);
+              } else if (e == 11) {
+                coloum1.splice(2, 1);
+              } else if (e == 12) {
+                coloum1.splice(2, 1);
+              } else if (e == 13) {
+                coloum1.splice(2, 1);
+              } else if (e == 14) {
+                coloum1.splice(2, 1);
+              } else if (e == 15) {
+                coloum1.splice(2, 1);
+              } else if (e == 16) {
+                coloum1.splice(2, 1);
+              } else if (e == 17) {
+                coloum1.splice(2, 1);
+              }
+            }
+          }
+        });
+        // coloum1.splice(1, 1);
+        // coloum2.splice(1, 1);
+        // coloum3.splice(1, 1);
+        // coloum4.splice(1, 1);
+        // coloum5.splice(1, 1);
+        // coloum6.splice(1, 1);
+        // coloum7.splice(1, 1);
+        // coloum8.splice(1, 1);
+        // coloum9.splice(1, 1);
+      }
+    }
+  });
+  row3.forEach((e) => {
+    if (ticketBox[e].innerHTML) {
+      if (rowCount3 != 5) {
+        rowCount3++;
+      } else {
+        row3.forEach((e) => {
+          if (ticketBox[e] == "") {
+            if (
+              coloum1.indexOf(e) == 0 ||
+              coloum2.indexOf(e) == 0 ||
+              coloum3.indexOf(e) == 0 ||
+              coloum4.indexOf(e) == 0 ||
+              coloum5.indexOf(e) == 0 ||
+              coloum6.indexOf(e) == 0 ||
+              coloum7.indexOf(e) == 0 ||
+              coloum8.indexOf(e) == 0 ||
+              coloum9.indexOf(e) == 0
+            ) {
+              console.log(coloum1.indexOf(e));
+              if (e == 18) {
+                coloum1.shift();
+              } else if (e == 19) {
+                coloum1.shift();
+              } else if (e == 20) {
+                coloum1.shift();
+              } else if (e == 21) {
+                coloum1.shift();
+              } else if (e == 22) {
+                coloum1.shift();
+              } else if (e == 23) {
+                coloum1.shift();
+              } else if (e == 24) {
+                coloum1.shift();
+              } else if (e == 25) {
+                coloum1.shift();
+              } else if (e == 26) {
+                coloum1.shift();
+              }
+            } else if (
+              coloum1.indexOf(e) == 1 ||
+              coloum2.indexOf(e) == 1 ||
+              coloum3.indexOf(e) == 1 ||
+              coloum4.indexOf(e) == 1 ||
+              coloum5.indexOf(e) == 1 ||
+              coloum6.indexOf(e) == 1 ||
+              coloum7.indexOf(e) == 1 ||
+              coloum8.indexOf(e) == 1 ||
+              coloum9.indexOf(e) == 1
+            ) {
+              if (e == 18) {
+                coloum1.splice(1, 1);
+              } else if (e == 19) {
+                coloum1.splice(1, 1);
+              } else if (e == 20) {
+                coloum1.splice(1, 1);
+              } else if (e == 21) {
+                coloum1.splice(1, 1);
+              } else if (e == 22) {
+                coloum1.splice(1, 1);
+              } else if (e == 23) {
+                coloum1.splice(1, 1);
+              } else if (e == 24) {
+                coloum1.splice(1, 1);
+              } else if (e == 25) {
+                coloum1.splice(1, 1);
+              } else if (e == 26) {
+                coloum1.splice(1, 1);
+              }
+            } else if (
+              coloum1.indexOf(e) == 2 ||
+              coloum2.indexOf(e) == 2 ||
+              coloum3.indexOf(e) == 2 ||
+              coloum4.indexOf(e) == 2 ||
+              coloum5.indexOf(e) == 2 ||
+              coloum6.indexOf(e) == 2 ||
+              coloum7.indexOf(e) == 2 ||
+              coloum8.indexOf(e) == 2 ||
+              coloum9.indexOf(e) == 2
+            ) {
+              if (e == 18) {
+                coloum1.splice(2, 1);
+              } else if (e == 19) {
+                coloum1.splice(2, 1);
+              } else if (e == 20) {
+                coloum1.splice(2, 1);
+              } else if (e == 21) {
+                coloum1.splice(2, 1);
+              } else if (e == 22) {
+                coloum1.splice(2, 1);
+              } else if (e == 23) {
+                coloum1.splice(2, 1);
+              } else if (e == 24) {
+                coloum1.splice(2, 1);
+              } else if (e == 25) {
+                coloum1.splice(2, 1);
+              } else if (e == 26) {
+                coloum1.splice(2, 1);
+              }
+            }
+          }
+        });
+        // coloum1.splice(2, 1);
+        // coloum2.splice(2, 1);
+        // coloum3.splice(2, 1);
+        // coloum4.splice(2, 1);
+        // coloum5.splice(2, 1);
+        // coloum6.splice(2, 1);
+        // coloum7.splice(2, 1);
+        // coloum8.splice(2, 1);
+        // coloum9.splice(2, 1);
+      }
+    }
+  });
+}
