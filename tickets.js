@@ -376,7 +376,7 @@ function removeRows() {
 }
 
 // /Housie-Number-Generator
-if (window.location.pathname === "/Housie-Number-Generator/ticket.html") {
+if (window.location.pathname === "/ticket.html") {
   ticketBox.forEach((e) => {
     e.innerHTML = "";
   });
@@ -672,12 +672,11 @@ function assendingOrder() {
 
 ticketBox.forEach(function (e) {
   e.addEventListener("click", function () {
-    if (e.innerHTML != "") {
-      this.disabled = true;
-      if (this.disabled == true) {
-        this.style.color = "black";
-        this.style.background = "red";
-      }
+    // if (e.innerHTML != "" && e.style.background == "52b788") {
+    if (e.innerHTML != "" && this.style.backgroundColor != "red") {
+      this.style.background = "red";
+    } else if (e.innerHTML != "") {
+      this.style.background = "#52b788";
     }
   });
 });
