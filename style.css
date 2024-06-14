@@ -5,8 +5,10 @@
   font-size: 62.5%;
 }
 
-body {
-  background-color: orangered;
+body,
+html {
+  background: linear-gradient(135deg, #588157, #a4161a);
+  /* background-color: #a4161a; */
 }
 
 .main-container {
@@ -161,8 +163,8 @@ orangered; */
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* background: linear-gradient(135deg, #52b788, #022917); */
-  background-color: orangered;
+  background: linear-gradient(135deg, #588157, #a4161a);
+  /* background-color: #588157; */
 }
 .tickets {
   width: 90vmin;
@@ -394,13 +396,13 @@ orangered; */
 
   .tickets {
     transform: rotate(90deg);
-    width: 140vmin;
-    height: 60vmin;
+    width: 150vmin;
+    height: 70vmin;
     margin-top: -5rem;
   }
   .ticket-box {
-    width: 15.55vmin;
-    height: 20vmin;
+    width: 16.66vmin;
+    height: 23.33vmin;
     font-size: 2rem;
   }
   .go-back {
