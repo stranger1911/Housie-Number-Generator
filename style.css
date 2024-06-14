@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
+body {
+  background-color: orangered;
+}
+
 .main-container {
   /* height: 100vh; width: 100vw; */ /* background-color:
 orangered; */
@@ -156,7 +161,8 @@ orangered; */
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(135deg, #52b788, #022917);
+  /* background: linear-gradient(135deg, #52b788, #022917); */
+  background-color: orangered;
 }
 .tickets {
   width: 90vmin;
@@ -199,7 +205,6 @@ orangered; */
   font-size: 2rem;
   color: black;
 }
-
 @media (max-width: 500px) {
   .main-container {
     transform: rotate(90deg);
@@ -228,7 +233,6 @@ orangered; */
     height: 3rem;
     width: 12rem;
   }
-
   .tickets {
     transform: rotate(90deg);
     width: 140vmin;
@@ -259,7 +263,6 @@ orangered; */
     font-size: 1.5rem;
   }
 }
-
 @media (max-width: 450px) {
   .main-container {
     transform: rotate(90deg);
@@ -291,7 +294,6 @@ orangered; */
     height: 3rem;
     width: 12rem;
   }
-
   .tickets {
     transform: rotate(90deg);
     width: 160vmin;
@@ -321,7 +323,6 @@ orangered; */
   .generate-tickets a {
     font-size: 1.5rem;
   }
-
   .tickets {
     transform: rotate(90deg);
     width: 170vmin;
@@ -352,7 +353,6 @@ orangered; */
     font-size: 1.5rem;
   }
 }
-
 @media (max-width: 400px) {
   .main-container {
     transform: rotate(90deg);
@@ -366,8 +366,7 @@ orangered; */
     align-items: center;
     flex-wrap: wrap;
     margin-left: 0rem;
-    gap: 0.1rem;
-    /* margin-top: -1rem; */
+    gap: 0.1rem; /* margin-top: -1rem; */
   }
   .number {
     height: 8%;
@@ -379,11 +378,9 @@ orangered; */
     margin-right: -25rem;
     margin-top: -1rem;
   }
-
   .generated-number {
     margin: 1rem;
   }
-
   .audio-of,
   .audio-on {
     width: 4rem;
@@ -394,8 +391,37 @@ orangered; */
     height: 3rem;
     width: 12rem;
   }
-}
 
+  .tickets {
+    transform: rotate(90deg);
+    width: 140vmin;
+    height: 60vmin;
+    margin-top: -5rem;
+  }
+  .ticket-box {
+    width: 15.55vmin;
+    height: 20vmin;
+    font-size: 2rem;
+  }
+  .go-back {
+    position: absolute;
+    margin-top: 15rem;
+    margin-left: -11rem;
+    width: 9rem;
+  }
+  .go-back a {
+    font-size: 1.2rem;
+  }
+  .generate-tickets {
+    position: absolute;
+    margin-top: 15rem;
+    margin-left: 2rem;
+    width: 8rem;
+  }
+  .generate-tickets a {
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 350px) {
   .main-container {
     transform: rotate(90deg);
@@ -422,7 +448,6 @@ orangered; */
     margin-right: -50rem;
     margin-top: -3.5rem;
   }
-
   .audio-of,
   .audio-on {
     width: 4rem;
@@ -433,9 +458,7 @@ orangered; */
     height: 3rem;
     width: 12rem;
   }
-}
-
-/* @media
+} /* @media
 (max-width: 500px) { .main-container { flex-direction: column; justify-content:
 center; align-items: center; max-width: 110%; min-height: 110%; } .container {
 flex-direction: row; height: 110vmin; width: 70vmin; transform: rotate(90deg);
