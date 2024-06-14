@@ -1,523 +1,166 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-size: 62.5%;
-}
-
-body,
-html {
-  background: linear-gradient(135deg, #588157, #a4161a);
-  /* background-color: #a4161a; */
+  box-sizing: border-box;
 }
 
 .main-container {
-  /* height: 100vh; width: 100vw; */ /* background-color:
-orangered; */
-  align-items: center;
-  justify-content: space-between;
-  display: flex; /* margin: 0.5rem; */
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #588157, #a4161a);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem;
 }
+
 .container {
-  /* height: 90vmin; width: 140vmin; */
-  /* background-color: red; */
-  height: 95%;
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem; /* margin-left: 4rem; */
-  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-items: center;
+  align-items: center;
 }
+
 .number {
-  height: 10%;
-  width: 9%;
+  height: 6rem;
+  width: 6rem;
   background-color: #52b788;
-  display: flex;
-  justify-content: center;
+  font-size: 2rem;
+  display: grid;
+  justify-items: center;
   align-items: center;
-  font-size: 3rem;
   border-radius: 2rem;
 }
+
 .btn-container {
-  /* height: 90vmin; width: 58vmin; */
-  height: 100%;
-  width: 30%;
-  /* background-color: rebeccapurple; */
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
   align-items: center;
-  flex-direction: column;
-  margin: 1rem;
+  text-align: center;
 }
-.generated-number {
-  height: 18vmin;
-  width: 20vmin;
-  border-radius: 50%;
-  border: 1px solid rgb(0, 0, 0);
-  margin: 2rem;
-  font-size: 4rem; /* text-align: center; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.reset-btn,
-.generate-btn {
-  height: 10vmin;
-  width: 40vmin;
-  background-color: #52b788;
-  border: none;
-  font-size: 2rem;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.audio-on {
-  height: 80px;
-  width: 80px;
-  stroke: #52b788;
-  margin-bottom: 2rem;
-  cursor: pointer;
-}
+
+.audio-on,
 .audio-of {
-  height: 80px;
-  width: 80px;
+  height: 5rem;
+  width: 5rem;
   stroke: #52b788;
-  margin-bottom: 2rem;
-  cursor: pointer;
+}
+
+.audio-of {
   display: none;
 }
-.history {
-  font-size: 2rem;
-  margin-top: 3rem;
-  text-decoration: none;
-  color: black;
-}
-.auto-generate {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* gap:
-0.2rem; */
-}
-.auto {
-  margin-top: 2rem;
-  height: 30px;
-  width: 100px;
-  font-size: 1.5rem;
-}
-.autoBtn {
-  margin-top: 1rem;
-  height: 30px;
-  width: 130px;
-  font-size: 1.5rem;
-  background-color: #52b788;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-}
-.stop {
-  margin-top: 2rem;
-  height: 30px;
-  width: 80px;
-  font-size: 1.5rem;
-  background-color: #52b788;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-.resume {
-  margin-top: 2rem;
-  height: 30px;
-  width: 80px;
-  font-size: 1.5rem;
-  background-color: #52b788;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-.history-tickets {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
+
+.reset-btn,
+.generate-btn,
+.autoBtn,
+.stop,
+.resume,
 .history,
 .ticket {
-  padding: 0.5rem;
-  margin: 0.5rem;
+  height: 4rem;
+  width: 12rem;
+  font-size: 1.5rem;
+  border-radius: 2rem;
   border: none;
   background-color: #52b788;
-  border-radius: 1rem;
 }
-.history a,
-.ticket a {
+
+.stop,
+.resume {
+  display: none;
+}
+
+.generated-number {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  border: 1px solid #52b788;
+  color: #52b788;
+  font-size: 5rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.auto {
+  height: 3rem;
+  width: 8rem;
+}
+
+select {
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.history,
+.ticket {
+  margin: 0.5rem;
+}
+
+.history a {
   text-decoration: none;
-  font-size: 1.5rem;
   color: black;
-} /* Tickets section */
+  font-size: 1.5rem;
+}
+
 .ticket-container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
   background: linear-gradient(135deg, #588157, #a4161a);
-  /* background-color: #588157; */
-}
-.tickets {
-  width: 90vmin;
-  height: 30vmin;
-  display: flex;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
-  flex-wrap: wrap;
 }
-.ticket-box {
-  width: 10vmin;
-  height: 10vmin;
-  border: 1px solid black;
+
+.tickets {
+  height: 40%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 1rem;
   font-size: 3rem;
-  background: linear-gradient(
-    135deg,
-    #52b788,
-    #52b788
-  ); /* box-shadow: 0 0 10px
-#4caf50, 0 0 40px #4caf50, 0 0 80px #4caf50; */
-  cursor: pointer;
-  border-radius: 1rem;
 }
-.control-btns {
-  margin-top: 4rem;
+
+.ticket-box {
+  border-radius: 2rem;
+  border: 1px solid #a4161a;
+  background-color: #52b788;
 }
+
 .go-back,
 .generate-tickets {
-  padding: 1rem;
-  font-size: 2rem;
-  background-color: #52b788;
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 8rem;
+  border-radius: 2rem;
   border: none;
   margin: 0.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
+  background-color: #52b788;
 }
+
 .go-back a,
 .generate-tickets a {
   text-decoration: none;
-  font-size: 2rem;
   color: black;
 }
-@media (max-width: 500px) {
+
+@media (max-width: 1000px) {
   .main-container {
     transform: rotate(90deg);
+    grid-template-columns: 2fr 1fr;
   }
-  .container {
-    margin: 0;
-    height: 47vh;
-    width: 130vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 3rem;
-  }
+
   .number {
-    height: 8%;
-    width: 9%;
-    font-size: 1.5rem;
-  }
-  .btn-container {
-    width: 20%;
-    margin-right: -38rem;
-  }
-  .generate-btn,
-  .reset-btn {
-    height: 3rem;
-    width: 12rem;
-  }
-  .tickets {
-    transform: rotate(90deg);
-    width: 140vmin;
-    height: 60vmin;
-    margin-top: -12rem;
-  }
-  .ticket-box {
-    width: 15.55vmin;
-    height: 20vmin;
-    font-size: 2rem;
-  }
-  .go-back {
-    position: absolute;
-    margin-top: 20rem;
-    margin-left: -12rem;
-    width: 11rem;
-  }
-  .go-back a {
-    font-size: 1.5rem;
-  }
-  .generate-tickets {
-    position: absolute;
-    margin-top: 20rem;
-    margin-left: 2rem;
-    width: 10rem;
-  }
-  .generate-tickets a {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 450px) {
-  .main-container {
-    transform: rotate(90deg);
-  }
-  .container {
-    margin: 0;
-    height: 43vh;
-    width: 160vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 0rem;
-    gap: 0.1rem;
-    margin-top: -1rem;
-  }
-  .number {
-    height: 8%;
-    width: 9%;
-    font-size: 1.5rem;
-  }
-  .btn-container {
-    width: 20%;
-    margin-right: -45rem;
-    margin-top: -1rem;
-  }
-  .generate-btn,
-  .reset-btn {
-    height: 3rem;
-    width: 12rem;
-  }
-  .tickets {
-    transform: rotate(90deg);
-    width: 160vmin;
-    height: 70vmin;
-    margin-top: -13rem;
-  }
-  .ticket-box {
-    width: 17.77vmin;
-    height: 23.33vmin;
-    font-size: 2rem;
-  }
-  .go-back {
-    position: absolute;
-    margin-top: 23rem;
-    margin-left: -12rem;
-    width: 11rem;
-  }
-  .go-back a {
-    font-size: 1.5rem;
-  }
-  .generate-tickets {
-    position: absolute;
-    margin-top: 23rem;
-    margin-left: 2rem;
-    width: 10rem;
-  }
-  .generate-tickets a {
-    font-size: 1.5rem;
-  }
-  .tickets {
-    transform: rotate(90deg);
-    width: 170vmin;
-    height: 80vmin;
-    margin-top: -13rem;
-  }
-  .ticket-box {
-    width: 18.88vmin;
-    height: 26.66vmin;
-    font-size: 2rem;
-  }
-  .go-back {
-    position: absolute;
-    margin-top: 23rem;
-    margin-left: -12rem;
-    width: 11rem;
-  }
-  .go-back a {
-    font-size: 1.5rem;
-  }
-  .generate-tickets {
-    position: absolute;
-    margin-top: 23rem;
-    margin-left: 2rem;
-    width: 10rem;
-  }
-  .generate-tickets a {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 400px) {
-  .main-container {
-    transform: rotate(90deg);
-  }
-  .container {
-    margin: 0;
-    height: 45vh;
-    width: 130vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 0rem;
-    gap: 0.1rem; /* margin-top: -1rem; */
-  }
-  .number {
-    height: 8%;
-    width: 9%;
-    font-size: 1.5rem;
-  }
-  .btn-container {
-    width: 20%;
-    margin-right: -25rem;
-    margin-top: -1rem;
-  }
-  .generated-number {
-    margin: 1rem;
-  }
-  .audio-of,
-  .audio-on {
-    width: 4rem;
-    height: 4rem;
-  }
-  .generate-btn,
-  .reset-btn {
-    height: 3rem;
-    width: 12rem;
   }
 
   .tickets {
     transform: rotate(90deg);
-    width: 150vmin;
-    height: 70vmin;
-    margin-top: -5rem;
   }
+
   .ticket-box {
-    width: 16.66vmin;
-    height: 23.33vmin;
-    font-size: 2rem;
-  }
-  .go-back {
-    position: absolute;
-    margin-top: 15rem;
-    margin-left: -11rem;
-    width: 9rem;
-  }
-  .go-back a {
-    font-size: 1.2rem;
-  }
-  .generate-tickets {
-    position: absolute;
-    margin-top: 15rem;
-    margin-left: 2rem;
-    width: 8rem;
-  }
-  .generate-tickets a {
-    font-size: 1.2rem;
+    height: 5rem;
+    width: 5rem;
   }
 }
-@media (max-width: 350px) {
-  .main-container {
-    transform: rotate(90deg);
-  }
-  .container {
-    margin: 0;
-    height: 40vh;
-    width: 180vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 0rem;
-    gap: 0.1rem;
-    margin-top: -3.5rem;
-  }
-  .number {
-    height: 8%;
-    width: 9%;
-    font-size: 1.5rem;
-  }
-  .btn-container {
-    width: 20%;
-    margin-right: -50rem;
-    margin-top: -3.5rem;
-  }
-  .audio-of,
-  .audio-on {
-    width: 4rem;
-    height: 4rem;
-  }
-  .generate-btn,
-  .reset-btn {
-    height: 3rem;
-    width: 12rem;
-  }
-} /* @media
-(max-width: 500px) { .main-container { flex-direction: column; justify-content:
-center; align-items: center; max-width: 110%; min-height: 110%; } .container {
-flex-direction: row; height: 110vmin; width: 70vmin; transform: rotate(90deg);
-margin: 0; margin-top: 10rem; gap: 0.2rem; } .number { height: 10vmin; width:
-6.6vmin; font-size: 1.5rem; } .btn-container { transform: rotate(90deg);
-margin-top: -16rem; } .reset-btn, .generate-btn { height: 10vmin; width: 20vmin;
-} .generated-number { margin: 1rem; height: 24vmin; font-size: 4rem; } .tickets
-{ transform: rotate(90deg); width: 90vmin; height: 40vmin; margin-top: -4rem; }
-.ticket-box { width: 10vmin; height: 13.33vmin; font-size: 2rem; } .go-back {
-position: absolute; margin-top: 11rem; margin-left: -12rem; width: 11rem; }
-.go-back a { font-size: 1.5rem; } .generate-tickets { position: absolute;
-margin-top: 11rem; margin-left: 2rem; width: 10rem; } .generate-tickets a {
-font-size: 1.5rem; } } */ /* @media (max-width: 450px) { .container {
-flex-direction: row; height: 100vmin; width: 80vmin; transform: rotate(90deg);
-margin: 0; margin-top: 10rem; gap: 0.2rem; } .number { height: 9vmin; width:
-7.8vmin; font-size: 1.5rem; } .btn-container { transform: rotate(90deg);
-margin-top: -14rem; } .tickets { transform: rotate(90deg); width: 90vmin;
-height: 40vmin; margin-top: -6rem; } .ticket-box { width: 10vmin; height:
-13.33vmin; font-size: 2rem; } .go-back { position: absolute; margin-top: 11rem;
-margin-left: -12rem; width: 11rem; } .go-back a { font-size: 1.5rem; }
-.generate-tickets { position: absolute; margin-top: 11rem; margin-left: 2rem;
-width: 10rem; } .generate-tickets a { font-size: 1.5rem; } } */ /* @media
-(max-width: 400px) { .main-container { flex-direction: column; justify-content:
-center; align-items: center; max-width: 110%; min-height: 110%; } .container {
-flex-direction: row; height: 110vmin; width: 80vmin; transform: rotate(90deg);
-margin: 0; margin-top: 7rem; gap: 0.2rem; } .number { height: 10vmin; width:
-7.4vmin; font-size: 1.5rem; } .btn-container { transform: rotate(90deg);
-margin-top: -8rem; } .reset-btn, .generate-btn { height: 10vmin; width: 30vmin;
-} .generated-number { margin: 1rem; height: 24vmin; font-size: 4rem; } .tickets
-{ transform: rotate(90deg); width: 105vmin; height: 50vmin; margin-top: -6rem; }
-.ticket-box { width: 11.66vmin; height: 16.66vmin; font-size: 2rem; } .go-back {
-position: absolute; margin-top: 11rem; margin-left: -12rem; width: 11rem; }
-.go-back a { font-size: 1.5rem; } .generate-tickets { position: absolute;
-margin-top: 11rem; margin-left: 2rem; width: 10rem; } .generate-tickets a {
-font-size: 1.5rem; } } */ /* @media (max-width: 350px) { .main-container {
-flex-direction: column; justify-content: center; align-items: center; max-width:
-110%; min-height: 110%; } .container { flex-direction: row; width: 100vmin;
-height: 110vmin; transform: rotate(90deg); margin: 0; margin-top: 12rem; gap:
-0.2rem; } .number { height: 10vmin; width: 9vmin; font-size: 1.5rem; }
-.btn-container { transform: rotate(90deg); margin-top: -5rem; }
-.generated-number { margin: 1rem; height: 24vmin; font-size: 4rem; } .tickets {
-transform: rotate(90deg); width: 120vmin; height: 50vmin; margin-top: -5rem; }
-.ticket-box { width: 13.33vmin; height: 16.66vmin; font-size: 2rem; } .go-back {
-position: absolute; margin-top: 11rem; margin-left: -12rem; width: 11rem; }
-.go-back a { font-size: 1.5rem; } .generate-tickets { position: absolute;
-margin-top: 11rem; margin-left: 2rem; width: 10rem; } .generate-tickets a {
-font-size: 1.5rem; } } */ /* @media (max-width: 300px) { .main-container {
-flex-direction: column; justify-content: center; align-items: center; max-width:
-110%; min-height: 110%; } .container { flex-direction: row; width: 100vmin;
-height: 110vmin; transform: rotate(90deg); margin: 0; margin-top: 5rem; gap:
-0.2rem; } .number { height: 10vmin; width: 9vmin; font-size: 1.5rem; }
-.generate-btn { font-size: 1.4rem; } .reset-btn { font-size: 1.4rem; }
-.btn-container { transform: rotate(90deg); margin-top: -1rem; }
-.generated-number { margin: 1rem; height: 24vmin; font-size: 4rem; } .tickets {
-transform: rotate(90deg); width: 140vmin; height: 60vmin; margin-top: -5rem; }
-.ticket-box { width: 15.55vmin; height: 20vmin; font-size: 2rem; } .go-back {
-position: absolute; margin-top: 12rem; margin-left: -11rem; width: 9rem; }
-.go-back a { font-size: 1.2rem; } .generate-tickets { position: absolute;
-margin-top: 12rem; margin-left: 2rem; width: 8rem; } .generate-tickets a {
-font-size: 1.2rem; } } */
