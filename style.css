@@ -4,15 +4,7 @@
   box-sizing: border-box;
   font-size: 62.5%;
 }
-body,
-html {
-  background: linear-gradient(
-    135deg,
-    #588157,
-    #a4161a
-  ); /*
-background-color: #a4161a; */
-}
+
 .main-container {
   /* height: 100vh; width:
 100vw; */ /* background-color: orangered; */
