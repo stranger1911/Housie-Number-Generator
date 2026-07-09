@@ -26,6 +26,7 @@ body {
   font-family: Segoe UI, Arial, sans-serif;
   background: radial-gradient(circle at top, #16456d, #071a2e 70%);
   color: var(--text);
+  overflow-y: auto;
 }
 
 button,
@@ -155,7 +156,6 @@ select:hover {
 /* Ticket */
 
 .ticket-container {
-  height: 100dvh;
   display: grid;
   grid-template-rows: 1fr auto;
   gap: 1rem;
@@ -235,5 +235,12 @@ select:hover {
     background: #071a2e;
     color: #fff;
     z-index: 9999;
+  }
+
+  @media (max-width:800px) {
+    .control-btns {
+      position: absolute;
+      top: 0;
+    }
   }
 }
