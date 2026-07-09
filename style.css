@@ -92,6 +92,7 @@ a {
   grid-template-rows: auto 1fr auto auto;
   gap: 1rem;
   box-shadow: var(--shadow);
+  overflow-y: auto;
 }
 
 .audio-icons {
