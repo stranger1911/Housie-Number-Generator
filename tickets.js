@@ -383,8 +383,8 @@ if (generateButton) {
 }
 
 if (
-  window.location.pathname.endsWith("ticket.html") ||
-  window.location.pathname === "/ticket.html"
+  window.location.pathname.endsWith("/Housie-Number-Generator/ticket.html") ||
+  window.location.pathname === "/Housie-Number-Generator/ticket.html"
 ) {
   regenerateUntilValid();
 }
