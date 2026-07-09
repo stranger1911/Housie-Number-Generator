@@ -3,7 +3,7 @@ let generatedNum = document.querySelector(".generated-number");
 let resetBtn = document.querySelector(".reset-btn");
 let number = document.querySelectorAll(".number");
 let audioOn = document.querySelector(".audio-on");
-let audioOf = document.querySelector(".audio-of");
+let audioOf = document.querySelector(".audio-off");
 let history = document.querySelector(".history");
 let autoGen = document.querySelector(".auto");
 let autoGenBtn = document.querySelector(".autoBtn");
@@ -25,6 +25,8 @@ generateBtn.addEventListener("click", generateRandomNum);
 
 function autoGenerateNum() {
   generateBtn.disabled = true;
+  generateBtn.style.opacity = ".5";
+  generateBtn.style.cursor = "not-allowed";
   autoGenBtn.style.display = "none";
   stopAutoGen.style.display = "block";
   if (autoGen.value == 3 && numCount < 90) {
@@ -55,6 +57,10 @@ function generateRandomNum() {
       randomNum = Math.floor(Math.random() * maxNum) + 1;
     } while (numberStored.includes(randomNum));
 
+    document
+      .querySelector(`.number:nth-child(${randomNum})`)
+      ?.classList.add("called");
+
     numberStored.push(randomNum);
     stopSpeech();
     utterance = new SpeechSynthesisUtterance(randomNum);
@@ -64,9 +70,10 @@ function generateRandomNum() {
     synth.speak(utterance);
     generatedNum.innerHTML = randomNum;
     let changeDivColor = document.querySelector(
-      `.number:nth-child(${randomNum})`
+      `.number:nth-child(${randomNum})`,
     );
     changeDivColor.style.backgroundColor = "#f8333c";
+    changeDivColor.style.color = "#fff";
     numCount++;
   } else {
     alert("Please reset first");
@@ -80,10 +87,11 @@ resetBtn.addEventListener("click", reset);
 function reset() {
   numberStored = [];
   number.forEach((el) => {
-    el.style.backgroundColor = "#52b788";
+    el.style.backgroundColor = "yellowgreen";
+    el.style.color = "#10395f";
   });
   numCount = 1;
-  generatedNum.innerHTML = "";
+  generatedNum.innerHTML = "?";
   generateBtn.disabled = false;
   autoGenBtn.style.display = "block";
   resumeAutoGen.style.display = "none";
@@ -142,6 +150,8 @@ function showHistory() {
 
 stopAutoGen.addEventListener("click", function () {
   generateBtn.disabled = false;
+  generateBtn.style.opacity = "1";
+  generateBtn.style.cursor = "default";
   clearInterval(intervalId3);
   clearInterval(intervalId6);
   clearInterval(intervalId9);
@@ -151,6 +161,8 @@ stopAutoGen.addEventListener("click", function () {
 
 resumeAutoGen.addEventListener("click", function () {
   generateBtn.disabled = true;
+  generateBtn.style.opacity = ".5";
+  generateBtn.style.cursor = "not-allowed";
   stopAutoGen.style.display = "block";
   resumeAutoGen.style.display = "none";
   if (autoGen.value == 3 && numCount < 90) {

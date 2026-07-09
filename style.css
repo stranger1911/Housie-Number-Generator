@@ -1,518 +1,238 @@
+/* Responsive Tambola UI */
+:root {
+  --bg: #071a2e;
+  --panel: #0d2b45;
+  --card: #123b5d;
+  --accent: #f4c542;
+  --accent2: #6ddc6d;
+  --text: #f8fafc;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden
+}
+
+body {
+  font-family: Segoe UI, Arial, sans-serif;
+  background: radial-gradient(circle at top, #16456d, #071a2e 70%);
+  color: var(--text);
+}
+
+button,
+select {
+  font: inherit
+}
+
+a {
+  text-decoration: none;
+  color: inherit
 }
 
 .main-container {
-  /* height: 100vh; width:
-100vw; */ /* background-color: orangered; */
-  align-items: center;
-  justify-content: space-between;
-  display: flex; /* margin: 0.5rem; */
-}
-.container {
-  /* height: 90vmin; width: 140vmin; */ /* background-color: red; */
-  height: 95%;
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem; /*
-margin-left: 4rem; */
-  margin: 1rem;
-}
-.number {
-  height: 10%;
-  width: 9%;
-  background-color: #52b788;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  border-radius: 2rem;
-}
-.btn-container {
-  /* height:
-90vmin; width: 58vmin; */
-  height: 100%;
-  width: 30%; /* background-color:
-rebeccapurple; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 1rem;
-}
-.generated-number {
-  height: 18vmin;
-  width: 20vmin;
-  border-radius: 50%;
-  border: 1px solid rgb(0, 0, 0);
-  margin: 2rem;
-  font-size: 4rem; /* text-align: center; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.reset-btn,
-.generate-btn {
-  height: 10vmin;
-  width: 40vmin;
-  background-color: #52b788;
-  border: none;
-  font-size: 2rem;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.audio-on {
-  height: 80px;
-  width: 80px;
-  stroke: #52b788;
-  margin-bottom: 2rem;
-  cursor: pointer;
-}
-.audio-of {
-  height: 80px;
-  width: 80px;
-  stroke: #52b788;
-  margin-bottom: 2rem;
-  cursor: pointer;
-  display: none;
-}
-.history {
-  font-size: 2rem;
-  margin-top: 3rem;
-  text-decoration: none;
-  color: black;
-}
-.auto-generate {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* gap: 0.2rem; */
-}
-.auto {
-  margin-top: 2rem;
-  height: 30px;
-  width: 100px;
-  font-size: 1.5rem;
-}
-.autoBtn {
-  margin-top: 1rem;
-  height: 30px;
-  width: 130px;
-  font-size: 1.5rem;
-  background-color: #52b788;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-}
-.stop {
-  margin-top: 2rem;
-  height: 30px;
-  width: 80px;
-  font-size: 1.5rem;
-  background-color: #52b788;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-.resume {
-  margin-top: 2rem;
-  height: 30px;
-  width: 80px;
-  font-size: 1.5rem;
-  background-color: #52b788;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-.history-tickets {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-.history,
-.ticket {
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border: none;
-  background-color: #52b788;
-  border-radius: 1rem;
-}
-.history a,
-.ticket a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: black;
-} /* Tickets section */
-.ticket-container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(
-    135deg,
-    #588157,
-    #a4161a
-  ); /* background-color: #588157; */
-}
-.tickets {
-  width: 90vmin;
-  height: 30vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.ticket-box {
-  width: 10vmin;
-  height: 10vmin;
-  border: 1px solid black;
-  font-size: 3rem;
-  background: linear-gradient(
-    135deg,
-    #52b788,
-    #52b788
-  ); /* box-shadow: 0 0 10px #4caf50, 0 0 40px #4caf50, 0 0 80px #4caf50;
-*/
-  cursor: pointer;
-  border-radius: 1rem;
-}
-.control-btns {
-  margin-top: 4rem;
-}
-.go-back,
-.generate-tickets {
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(260px, 1fr);
+  gap: 1rem;
   padding: 1rem;
-  font-size: 2rem;
-  background-color: #52b788;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  grid-template-rows: repeat(9, minmax(0, 1fr));
+  gap: .35rem;
+  height: calc(100dvh - 2rem);
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(#8fe45d, #6dc93e);
+  color: #08304f;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: .2s;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  min-height: 0;
+  font-size: clamp(.9rem, 1.2vw, 1.8rem);
+}
+
+.number.called {
+  background: #4b5563;
+  color: #fff;
+}
+
+
+.number:hover {
+  transform: translateY(-2px) scale(1.03)
+}
+
+.btn-container {
+  background: rgba(13, 43, 69, .9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.audio-icons {
+  display: flex;
+  justify-content: center
+}
+
+.audio-icons svg {
+  width: 54px;
+  height: 54px;
+  color: var(--accent)
+}
+
+.audio-off {
+  display: none
+}
+
+.start-control-btn,
+.auto-control-btn,
+.history-tickets {
+  display: grid;
+  gap: .8rem;
+}
+
+.generated-number {
+  margin: auto;
+  width: min(120px, 30vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: clamp(2rem, 3vw, 3.6rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), #ffdf73);
+  color: #08243a;
+  box-shadow: 0 0 25px rgba(244, 197, 66, .4);
+}
+
+button,
+.auto {
   border: none;
-  margin: 0.5rem;
-  border-radius: 1rem;
+  border-radius: 12px;
+  padding: .9rem;
+  background: linear-gradient(#194d78, #123b5d);
+  color: #fff;
   cursor: pointer;
+  transition: .2s;
 }
-.go-back a,
-.generate-tickets a {
-  text-decoration: none;
-  font-size: 2rem;
-  color: black;
+
+button:hover,
+select:hover {
+  transform: translateY(-2px)
 }
-@media (max-width: 500px) {
+
+.stop,
+.resume {
+  display: none
+}
+
+/* Ticket */
+
+.ticket-container {
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.tickets {
+  width: min(96vw, 1100px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  border: 4px solid var(--accent);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.ticket-box {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: #10395f;
+  color: var(--accent2);
+  border: 1px solid rgba(255, 255, 255, .08);
+  font-size: clamp(1.4rem, 3vw, 3rem);
+  font-weight: 700;
+}
+
+.control-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Tablet */
+@media(max-width:900px) {
   .main-container {
-    transform: rotate(90deg);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
   }
-  .container {
-    margin: 0;
-    height: 47vh;
-    width: 130vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 3rem;
-  }
-  .number {
-    height: 8%;
-    width: 9%;
-    font-size: 1.5rem;
-  }
+
   .btn-container {
-    width: 20%;
-    margin-right: -38rem;
-  }
-  .generate-btn,
-  .reset-btn {
-    height: 3rem;
-    width: 12rem;
-  }
-  .tickets {
-    transform: rotate(90deg);
-    width: 140vmin;
-    height: 60vmin;
-    margin-top: -12rem;
-  }
-  .ticket-box {
-    width: 15.55vmin;
-    height: 20vmin;
-    font-size: 2rem;
-  }
-  .go-back {
-    position: absolute;
-    margin-top: 20rem;
-    margin-left: -12rem;
-    width: 11rem;
-  }
-  .go-back a {
-    font-size: 1.5rem;
-  }
-  .generate-tickets {
-    position: absolute;
-    margin-top: 20rem;
-    margin-left: 2rem;
-    width: 10rem;
-  }
-  .generate-tickets a {
-    font-size: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    align-items: start;
   }
 }
-@media (max-width: 450px) {
+
+/* Mobile landscape */
+@media(max-width:932px) and (orientation:landscape) {
   .main-container {
-    transform: rotate(90deg);
+    grid-template-columns: 3fr 1.2fr
   }
-  .container {
-    margin: 0;
-    height: 43vh;
-    width: 160vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 0rem;
-    gap: 0.1rem;
-    margin-top: -1rem;
-  }
+
   .number {
-    height: 8%;
-    width: 9%;
-    font-size: 1.5rem;
+    font-size: 1rem
   }
-  .btn-container {
-    width: 20%;
-    margin-right: -45rem;
-    margin-top: -1rem;
-  }
-  .generate-btn,
-  .reset-btn {
-    height: 3rem;
-    width: 12rem;
-  }
-  .tickets {
-    transform: rotate(90deg);
-    width: 160vmin;
-    height: 70vmin;
-    margin-top: -13rem;
-  }
-  .ticket-box {
-    width: 17.77vmin;
-    height: 23.33vmin;
-    font-size: 2rem;
-  }
-  .go-back {
-    position: absolute;
-    margin-top: 23rem;
-    margin-left: -12rem;
-    width: 11rem;
-  }
-  .go-back a {
-    font-size: 1.5rem;
-  }
-  .generate-tickets {
-    position: absolute;
-    margin-top: 23rem;
-    margin-left: 2rem;
-    width: 10rem;
-  }
-  .generate-tickets a {
-    font-size: 1.5rem;
-  }
-  .tickets {
-    transform: rotate(90deg);
-    width: 170vmin;
-    height: 80vmin;
-    margin-top: -13rem;
-  }
-  .ticket-box {
-    width: 18.88vmin;
-    height: 26.66vmin;
-    font-size: 2rem;
-  }
-  .go-back {
-    position: absolute;
-    margin-top: 23rem;
-    margin-left: -12rem;
-    width: 11rem;
-  }
-  .go-back a {
-    font-size: 1.5rem;
-  }
-  .generate-tickets {
-    position: absolute;
-    margin-top: 23rem;
-    margin-left: 2rem;
-    width: 10rem;
-  }
-  .generate-tickets a {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 400px) {
-  .main-container {
-    transform: rotate(90deg);
-  }
-  .container {
-    margin: 0;
-    height: 45vh;
-    width: 130vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 0rem;
-    gap: 0.1rem; /* margin-top: -1rem; */
-  }
-  .number {
-    height: 8%;
-    width: 9%;
-    font-size: 1.5rem;
-  }
-  .btn-container {
-    width: 20%;
-    margin-right: -25rem;
-    margin-top: -1rem;
-  }
+
   .generated-number {
-    margin: 1rem;
-  }
-  .audio-of,
-  .audio-on {
-    width: 4rem;
-    height: 4rem;
-  }
-  .generate-btn,
-  .reset-btn {
-    height: 3rem;
-    width: 12rem;
-  }
-  .tickets {
-    transform: rotate(90deg);
-    width: 150vmin;
-    height: 70vmin;
-    margin-top: -5rem;
-  }
-  .ticket-box {
-    width: 16.66vmin;
-    height: 23.33vmin;
-    font-size: 2rem;
-  }
-  .go-back {
-    position: absolute;
-    margin-top: 15rem;
-    margin-left: -11rem;
-    width: 9rem;
-  }
-  .go-back a {
-    font-size: 1.2rem;
-  }
-  .generate-tickets {
-    position: absolute;
-    margin-top: 15rem;
-    margin-left: 2rem;
-    width: 8rem;
-  }
-  .generate-tickets a {
-    font-size: 1.2rem;
+    width: 80px
   }
 }
-@media (max-width: 350px) {
-  .main-container {
-    transform: rotate(90deg);
+
+/* Mobile portrait */
+@media(max-width:768px) and (orientation:portrait) {
+  body::before {
+    content: "Rotate your device for the best experience";
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    background: #071a2e;
+    color: #fff;
+    z-index: 9999;
   }
-  .container {
-    margin: 0;
-    height: 40vh;
-    width: 180vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 0rem;
-    gap: 0.1rem;
-    margin-top: -3.5rem;
-  }
-  .number {
-    height: 8%;
-    width: 9%;
-    font-size: 1.5rem;
-  }
-  .btn-container {
-    width: 20%;
-    margin-right: -50rem;
-    margin-top: -3.5rem;
-  }
-  .audio-of,
-  .audio-on {
-    width: 4rem;
-    height: 4rem;
-  }
-  .generate-btn,
-  .reset-btn {
-    height: 3rem;
-    width: 12rem;
-  }
-} /* @media (max-width: 500px) { .main-container { flex-direction: column;
-justify-content: center; align-items: center; max-width: 110%; min-height: 110%;
-} .container { flex-direction: row; height: 110vmin; width: 70vmin; transform:
-rotate(90deg); margin: 0; margin-top: 10rem; gap: 0.2rem; } .number { height:
-10vmin; width: 6.6vmin; font-size: 1.5rem; } .btn-container { transform:
-rotate(90deg); margin-top: -16rem; } .reset-btn, .generate-btn { height: 10vmin;
-width: 20vmin; } .generated-number { margin: 1rem; height: 24vmin; font-size:
-4rem; } .tickets { transform: rotate(90deg); width: 90vmin; height: 40vmin;
-margin-top: -4rem; } .ticket-box { width: 10vmin; height: 13.33vmin; font-size:
-2rem; } .go-back { position: absolute; margin-top: 11rem; margin-left: -12rem;
-width: 11rem; } .go-back a { font-size: 1.5rem; } .generate-tickets { position:
-absolute; margin-top: 11rem; margin-left: 2rem; width: 10rem; }
-.generate-tickets a { font-size: 1.5rem; } } */ /* @media (max-width: 450px) {
-.container { flex-direction: row; height: 100vmin; width: 80vmin; transform:
-rotate(90deg); margin: 0; margin-top: 10rem; gap: 0.2rem; } .number { height:
-9vmin; width: 7.8vmin; font-size: 1.5rem; } .btn-container { transform:
-rotate(90deg); margin-top: -14rem; } .tickets { transform: rotate(90deg); width:
-90vmin; height: 40vmin; margin-top: -6rem; } .ticket-box { width: 10vmin;
-height: 13.33vmin; font-size: 2rem; } .go-back { position: absolute; margin-top:
-11rem; margin-left: -12rem; width: 11rem; } .go-back a { font-size: 1.5rem; }
-.generate-tickets { position: absolute; margin-top: 11rem; margin-left: 2rem;
-width: 10rem; } .generate-tickets a { font-size: 1.5rem; } } */ /* @media
-(max-width: 400px) { .main-container { flex-direction: column; justify-content:
-center; align-items: center; max-width: 110%; min-height: 110%; } .container {
-flex-direction: row; height: 110vmin; width: 80vmin; transform: rotate(90deg);
-margin: 0; margin-top: 7rem; gap: 0.2rem; } .number { height: 10vmin; width:
-7.4vmin; font-size: 1.5rem; } .btn-container { transform: rotate(90deg);
-margin-top: -8rem; } .reset-btn, .generate-btn { height: 10vmin; width: 30vmin;
-} .generated-number { margin: 1rem; height: 24vmin; font-size: 4rem; } .tickets
-{ transform: rotate(90deg); width: 105vmin; height: 50vmin; margin-top: -6rem; }
-.ticket-box { width: 11.66vmin; height: 16.66vmin; font-size: 2rem; } .go-back {
-position: absolute; margin-top: 11rem; margin-left: -12rem; width: 11rem; }
-.go-back a { font-size: 1.5rem; } .generate-tickets { position: absolute;
-margin-top: 11rem; margin-left: 2rem; width: 10rem; } .generate-tickets a {
-font-size: 1.5rem; } } */ /* @media (max-width: 350px) { .main-container {
-flex-direction: column; justify-content: center; align-items: center; max-width:
-110%; min-height: 110%; } .container { flex-direction: row; width: 100vmin;
-height: 110vmin; transform: rotate(90deg); margin: 0; margin-top: 12rem; gap:
-0.2rem; } .number { height: 10vmin; width: 9vmin; font-size: 1.5rem; }
-.btn-container { transform: rotate(90deg); margin-top: -5rem; }
-.generated-number { margin: 1rem; height: 24vmin; font-size: 4rem; } .tickets {
-transform: rotate(90deg); width: 120vmin; height: 50vmin; margin-top: -5rem; }
-.ticket-box { width: 13.33vmin; height: 16.66vmin; font-size: 2rem; } .go-back {
-position: absolute; margin-top: 11rem; margin-left: -12rem; width: 11rem; }
-.go-back a { font-size: 1.5rem; } .generate-tickets { position: absolute;
-margin-top: 11rem; margin-left: 2rem; width: 10rem; } .generate-tickets a {
-font-size: 1.5rem; } } */ /* @media (max-width: 300px) { .main-container {
-flex-direction: column; justify-content: center; align-items: center; max-width:
-110%; min-height: 110%; } .container { flex-direction: row; width: 100vmin;
-height: 110vmin; transform: rotate(90deg); margin: 0; margin-top: 5rem; gap:
-0.2rem; } .number { height: 10vmin; width: 9vmin; font-size: 1.5rem; }
-.generate-btn { font-size: 1.4rem; } .reset-btn { font-size: 1.4rem; }
-.btn-container { transform: rotate(90deg); margin-top: -1rem; }
-.generated-number { margin: 1rem; height: 24vmin; font-size: 4rem; } .tickets {
-transform: rotate(90deg); width: 140vmin; height: 60vmin; margin-top: -5rem; }
-.ticket-box { width: 15.55vmin; height: 20vmin; font-size: 2rem; } .go-back {
-position: absolute; margin-top: 12rem; margin-left: -11rem; width: 9rem; }
-.go-back a { font-size: 1.2rem; } .generate-tickets { position: absolute;
-margin-top: 12rem; margin-left: 2rem; width: 8rem; } .generate-tickets a {
-font-size: 1.2rem; } } */
+}
